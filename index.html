@@ -1,30 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Readme</title>
-    <style>
-        * {
-            font-family: sans-serif;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-        }
-    </style>
+    <title>LAARAJ Salaheddine</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://unpkg.com/htmx.org@1.9.10"
+        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+        crossorigin="anonymous"
+        onerror="handleError()"></script>
+
+    <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
-    <div class="container">
-       <h1>Just fixing some issues, Check it out later</h1>
+    <nav class="navbar navbar-expand-lg fixed-top lse-blue">
+        <div class="container">
+            <div class="lse-navbar-toggler">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <a class="navbar-brand" href="./" title="Laaraj Salaheddine">
+                    &lt;L-S-E /&gt;
+                </a>
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" data-item-id="home" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item text-capitalize">
+                        <a class="nav-link" data-item-id="work" href="#work">work</a>
+                    </li>
+                    <li class="nav-item text-capitalize">
+                        <a class="nav-link" data-item-id="profile" href="#profile">profile</a>
+                    </li>
+                    <li class="nav-item text-capitalize">
+                        <a class="nav-link" data-item-id="contact" href="#contact">contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main style="margin-top: 60px!important;">
+        <section id="landing-section">
+            <div hx-get="./landing-section.html" hx-trigger="revealed">
+            </div>
+        </section>
+    </main>
+    <footer class="py-1 my-1 lse-blue">
+        <div class="container">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item text-capitalize active"><a data-item-id="home" href="#home"
+                        class="nav-link px-2 text-muted">Home</a></li>
+                <li class="nav-item text-capitalize"><a data-item-id="work" href="#work"
+                        class="nav-link px-2 text-muted">Work</a></li>
+                <li class="nav-item text-capitalize"><a data-item-id="profile" href="#profile"
+                        class="nav-link px-2 text-muted">profile</a>
+                </li>
+                <li class="nav-item text-capitalize"><a data-item-id="contact" href="#contact"
+                        class="nav-link px-2 text-muted">Contact</a>
+                </li>
+            </ul>
+            <p class="text-center text-muted">&copy; <span>2023</span> Salaheddine LAARAJ</p>
+        </div>
+    </footer>
 
-        <p><a href="https://www.linkedin.com/in/laarajsalaheddine/">Linkedin</a></p>
-        <p><a href="https://github.com/laarajsalaheddine/">Github</a></p>
-        <p><a href="mailto:laarajsalaheddine@gmail.com">Mail</a></p>
-    
-        <img src="https://souzouweb.com/wp-content/uploads/2019/02/Souzou-WebSite-Management-silver-flat-1.svg" alt="image" width="500" height="auto"> 
-    </div>
-    
+    <script>
+        document.addEventListener("click", function (event) {
+            const navbarTogglerBtn = document.querySelector('.lse-navbar-toggler');
+            const navbarTogglerNav = document.getElementById('navbarToggler');
 
+            const isNavbarToggler = event.target.classList.contains('lse-navbar-toggler') ||
+                event.target.parentNode.classList.contains('lse-navbar-toggler');
+
+            navbarTogglerBtn.classList.toggle("change", isNavbarToggler);
+            navbarTogglerNav.classList.toggle("show", isNavbarToggler);
+        });
+
+        document.querySelectorAll('li.nav-item').forEach(element => {
+            element.addEventListener("click", function (event) {
+                const targetId = element.querySelector("a").getAttribute('data-item-id');
+                document.querySelectorAll('li.active').forEach(oneActiveElt => {
+                    oneActiveElt.classList.remove("active");
+                });
+
+                if (targetId) {
+                    document.querySelectorAll(`[data-item-id="${targetId}"]`).forEach(oneDataItemId => {
+                        oneDataItemId.parentNode.classList.add("active");
+                    });
+                }
+            });
+        });
+
+    </script>
 </body>
+
 </html>
