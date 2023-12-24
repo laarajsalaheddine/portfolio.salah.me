@@ -30,16 +30,16 @@
                 </a>
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" data-item-id="home" href="#">Home</a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item text-capitalize">
-                        <a class="nav-link" data-item-id="work" href="#work">work</a>
+                        <a class="nav-link" href="#work">work</a>
                     </li>
                     <li class="nav-item text-capitalize">
-                        <a class="nav-link" data-item-id="profile" href="#profile">profile</a>
+                        <a class="nav-link" href="#profile">profile</a>
                     </li>
                     <li class="nav-item text-capitalize">
-                        <a class="nav-link" data-item-id="contact" href="#contact">contact</a>
+                        <a class="nav-link" href="#contact">contact</a>
                     </li>
                 </ul>
             </div>
@@ -57,19 +57,19 @@
     </main>
     <footer class="py-1 my-1 lse-blue">
         <div class="container">
-            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-                <li class="nav-item text-capitalize active"><a data-item-id="home" href="#"
-                        class="nav-link px-2 text-muted">Home</a></li>
-                <li class="nav-item text-capitalize"><a data-item-id="work" href="#work"
-                        class="nav-link px-2 text-muted">Work</a></li>
-                <li class="nav-item text-capitalize"><a data-item-id="profile" href="#profile"
-                        class="nav-link px-2 text-muted">profile</a>
+            <ul class="nav justify-content-center border-bottom py-1 my-1">
+                <li class="nav-item text-capitalize" title="Github">
+                    <a href="https://www.linkedin.com/" target="_blank" class="nav-link px-2 text-muted">
+                        <i class="mx-1 bi bi-github"></i>
+                    </a>
                 </li>
-                <li class="nav-item text-capitalize"><a data-item-id="contact" href="#contact"
-                        class="nav-link px-2 text-muted">Contact</a>
+                <li class="nav-item text-capitalize" title="linkedin">
+                    <a href="https://github.com/" target="_blank" class="nav-link px-2 text-muted">
+                        <i class="mx-1 bi bi-linkedin"></i>
+                    </a>
                 </li>
             </ul>
-            <p class="text-center text-muted">&copy; <span>2023</span> Salaheddine LAARAJ</p>
+            <p class="text-center text-muted my-2">&copy; <span>2023</span> Salaheddine LAARAJ</p>
         </div>
     </footer>
 
@@ -90,16 +90,8 @@
 
         document.querySelectorAll('li.nav-item').forEach(element => {
             element.addEventListener("click", function (event) {
-                const targetId = element.querySelector("a").getAttribute('data-item-id');
-                document.querySelectorAll('li.active').forEach(oneActiveElt => {
-                    oneActiveElt.classList.remove("active");
-                });
-
-                if (targetId) {
-                    document.querySelectorAll(`[data-item-id="${targetId}"]`).forEach(oneDataItemId => {
-                        oneDataItemId.parentNode.classList.add("active");
-                    });
-                }
+                document.querySelector('li.active').classList.remove("active");
+                element.classList.add("active");
             });
         });
 

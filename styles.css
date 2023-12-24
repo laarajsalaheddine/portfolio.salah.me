@@ -72,8 +72,12 @@ li.nav-item.active::after {
     border-radius: 7px;
 }
 
-.nav-link {
+nav .nav-link {
     padding-left: 6px;
+}
+
+footer .nav-link {
+    font-size: 1.6em;
 }
 
 #personal-image {
@@ -161,6 +165,16 @@ section {
     #navbarToggler>.navbar-nav {
         width: fit-content;
         text-align: left;
+    }
+
+    #personal-image {
+        width: 180px;
+        border: 1px solid;
+        border-radius: 50%;
+        overflow: hidden;
+        float: left;
+        clear: both;
+        margin-right: 10px;
     }
 
 }
