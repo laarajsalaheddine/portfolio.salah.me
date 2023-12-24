@@ -12,6 +12,7 @@
     transition: 0.4s;
 }
 
+
 body::-webkit-scrollbar {
     width: 15px;
 }
@@ -23,6 +24,23 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
     background-color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif !important;
+}
+
+.lse-text-blue {
+    color: var(--blue) !important;
+}
+
+.lse-text-red {
+    color: var(--red) !important;
 }
 
 .lse-blue {
@@ -52,7 +70,30 @@ li.nav-item.active::after {
     height: 2px;
     background-color: #fff;
     border-radius: 7px;
-    width: calc(100% - 20px);
+}
+
+.nav-link {
+    padding-left: 6px;
+}
+
+#personal-image {
+    width: 240px;
+    border: 1px solid;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+    clear: both;
+    margin-right: 50px;
+}
+
+#personal-image img {
+    width: 100%;
+    height: auto;
+}
+
+section {
+    padding-top: 60px !important;
+    min-height: 95vh;
 }
 
 /* Menu burger  */
@@ -80,7 +121,15 @@ li.nav-item.active::after {
 
 /* Menu burger  */
 
-@media only screen and (max-width: 768px) {
+#landing-section h1 {
+    font-size: 4em;
+}
+
+#landing-section h2 {
+    font-size: 2em;
+}
+
+@media only screen and (max-width: 991px) {
     .lse-navbar-toggler {
         display: block;
     }
@@ -110,11 +159,8 @@ li.nav-item.active::after {
     }
 
     #navbarToggler>.navbar-nav {
-        width: calc(100% - 20px);
-        text-align: center;
+        width: fit-content;
+        text-align: left;
     }
 
-    nav li.nav-item.active::after {
-        width: 15%;
-    }
 }
