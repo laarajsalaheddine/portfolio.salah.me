@@ -9,7 +9,7 @@
 * {
     font-family: "Lato", sans-serif;
     scroll-behavior: smooth;
-    transition: 0.4s;
+    transition: 0.2s;
 }
 
 
@@ -133,6 +133,87 @@ section {
     font-size: 2em;
 }
 
+.htmx-indicator {
+    display: none;
+}
+
+.htmx-request .htmx-indicator {
+    display: inline;
+}
+
+.htmx-request.htmx-indicator {
+    display: inline;
+}
+
+.socials-cta {
+    font-size: 2em;
+    text-decoration: none;
+    color: var(--red);
+}
+
+
+.socials-cta:hover {
+    color: #0E6BAE;
+    transition: .2s !important;
+}
+
+#download-cv-container {
+    position: relative;
+}
+
+.border-out {
+    border: 1px solid #000;
+}
+
+#download-cv-dropdown-content {
+    position: absolute;
+    border: 1px solid #ccc;
+    width: 200px;
+    border-radius: 7px;
+    padding: 0px;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+#download-cv-dropdown-content>a {
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+#download-cv-dropdown-content>a:hover {
+    background: var(--red);
+    color: #fff;
+}
+
+.bounce-in-top {
+    -webkit-animation: bounce-in-top .5s both;
+    animation: bounce-in-top .5s both
+}
+
+@-webkit-keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce-in-top {
+    0% {
+        -webkit-transform: translateY(-65px);
+        transform: translateY(-65px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
 @media only screen and (max-width: 991px) {
     .lse-navbar-toggler {
         display: block;
@@ -177,4 +258,21 @@ section {
         margin-right: 10px;
     }
 
+    section {
+        padding: 0px;
+    }
+
+    #landing-section h1 {
+        font-size: 2.6em;
+    }
+
+    #landing-section h2 {
+        font-size: 1.6em;
+    }
+
+    #download-cv-dropdown-content {
+        position: absolute;
+        right: -85px;
+        top: 52px;
+    }
 }
