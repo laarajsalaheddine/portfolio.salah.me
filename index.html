@@ -74,27 +74,32 @@
                     to my colleagues.
                     </p>
                     <div class="socials-cta-container text-center py-3">
-                        <a href="#" class="text-capitalize my-1 mx-1 socials-cta" title="Github" id="github">
+                        <a href="#" class="btn btn-default text-capitalize my-1 mx-1 socials-cta" title="Github"
+                            id="socials-cta-github">
                             <i class="fa-brands fa-github"></i>
                         </a>
-                        <a href="#" class="text-capitalize my-1 mx-1 socials-cta" title="linkedin" id="linkedin">
+                        <a href="#" class="btn btn-default text-capitalize my-1 mx-1 socials-cta" title="linkedin"
+                            id="socials-cta-linkedin">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
-                        <a href="#" class="text-capitalize my-1 mx-1 socials-cta" title="Contact" id="contact">
+                        <a href="#contact" class="btn btn-default text-capitalize my-1 mx-1 socials-cta" title="Contact"
+                            id="socials-cta-contact">
                             <i class="fa-solid fa-envelope"></i>
                         </a>
                         <div class="d-inline-block" id="download-cv-container">
-                            <a href="#" class="text-capitalize my-1 mx-1 socials-cta" title="Download CV"
-                                id="download-cv">
+                            <a href="#" class="btn btn-default text-capitalize my-1 mx-1 socials-cta"
+                                title="Download CV" id="download-cv">
                                 <i class="fa-solid fa-file-arrow-down"></i>
                             </a>
                             <div class="dropdown-content bounce-in-top d-none" id="download-cv-dropdown-content">
                                 <a title="cv in French" class="text-center d-block p-1"
-                                    download="./assets/files/cv-placeholder.pdf" href="./assets/files/cv-placeholder.pdf">
+                                    download="./assets/files/cv-placeholder.pdf"
+                                    href="./assets/files/cv-placeholder.pdf">
                                     French
                                 </a>
                                 <a title="cv in English" class="text-center d-block p-1"
-                                    download="./assets/files/cv-placeholder.pdf" href="./assets/files/cv-placeholder.pdf">
+                                    download="./assets/files/cv-placeholder.pdf"
+                                    href="./assets/files/cv-placeholder.pdf">
                                     English
                                 </a>
                             </div>
@@ -222,6 +227,78 @@
             </div>
         </section>
         <!-- *********** [-- Profile --] ************ -->
+        <!-- *********** [-- Contact --] ************ -->
+        <section id="contact">
+            <div class="container py-2 my-5">
+                <h1 class="lse-text-blue text-center">
+                    <span class="text-capitalize">Contact</span>
+                </h1>
+                <div class="container contact-form">
+                    <div class="contact-additional-info">
+                        <div class="phone-number">
+                            <i class="fa-solid fa-phone text-primary"></i>
+                            <i class="fa-brands fa-whatsapp text-success"></i>
+                            <span><a href="tel:+212639851503">
+                                    +212 639851503
+                                </a></span>
+                        </div>
+                        <div class="location">
+                            <i class="fa-solid fa-location-dot text-danger"></i>
+                            <span>
+                                Morocco, Casablanca, Metro Area
+                            </span>
+                        </div>
+                        <div class="text-primary linkedin">
+                            <i class="fab fa-linkedin"></i>
+                            <a title="Linkedin" href="https://www.linkedin.com/" target="_blank">Linkedin </a>
+                        </div>
+                    </div>
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group my-3">
+                                    <input autocomplete="off" required type="text" name="txtName" class="form-control"
+                                        placeholder="Your Name (*)" value="" />
+                                </div>
+                                <div class="form-group my-3">
+                                    <input autocomplete="off" type="text" name="txtPhone" class="form-control"
+                                        placeholder="Your Phone Number" value="" />
+                                </div>
+                                <div class="form-group my-3">
+                                    <input autocomplete="off" type="text" name="org" class="form-control" placeholder="Your Organization"
+                                        value="" />
+                                </div>
+                                <div class="form-group my-3">
+                                    <input autocomplete="off" required type="text" name="txtEmail" class="form-control"
+                                        placeholder="Your Email (*)" value="" />
+                                </div>
+                                <div class="form-group my-3">
+                                    <input autocomplete="off" type="text" name="subject" class="form-control" placeholder="Subject"
+                                        value="" />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group my-3">
+                                    <textarea required name="txtMsg" class="form-control" placeholder="Your Message (*)"
+                                        style="width: 100%; height: 250px"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <button required type="submit" name="btnSubmit" id="btnContact" class="btn btn-default px-5"
+                                            value="Send ">
+                                            Send
+                                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
     <footer class="py-1 my-1 lse-blue">
         <div class="container">

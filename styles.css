@@ -97,6 +97,9 @@ footer .nav-link {
 
 section {
     padding-top: 60px !important;
+    min-height: 50vh;
+}
+section#landing-section{
     min-height: 95vh;
 }
 
@@ -145,16 +148,25 @@ section {
     display: inline;
 }
 
-.socials-cta {
-    font-size: 2em;
-    text-decoration: none;
-    color: var(--red);
+
+#btnContact, .socials-cta{
+    background: var(--red);
+    color: #fff;
 }
 
-
-.socials-cta:hover {
-    color: #0E6BAE;
-    transition: .2s !important;
+.socials-cta:hover,#btnContact:hover {
+    background: var(--light-blue);
+}
+.socials-cta {
+    font-size: 1.7em;
+    text-decoration: none;
+    padding: 0px 10px;
+}
+.contact-additional-info{
+    font-size: 1.3em;
+}
+.contact-additional-info i{
+    margin: 1px 5px;
 }
 
 #download-cv-container {
