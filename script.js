@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.querySelectorAll('#nav-tabs-container li.nav-item').forEach(tabElt => {
+        tabElt.addEventListener("click", function () {
+            console.log("tabElt triggered");
+            document.querySelector('#nav-tabs-container a.active').classList.remove("active");
+            tabElt.querySelector('a').classList.add("active");
+        });
+    });
 
 
     downloadCV.addEventListener("click", function (event) {
