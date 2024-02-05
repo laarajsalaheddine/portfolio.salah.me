@@ -213,6 +213,10 @@ div.card {
     border: 1px solid #000;
 }
 
+#what-i-do > div{
+    width: 30%;
+}
+
 #download-cv-dropdown-content {
     position: absolute;
     border: 1px solid #ccc;
@@ -274,6 +278,9 @@ div.card {
 }
 
 @media only screen and (max-width: 450px) {
+    #what-i-do > div{
+        width: 90%;
+    }
     div.card {
         width: calc(100% - 20px);
     }
@@ -285,12 +292,18 @@ div.card {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 450px) {
+    #what-i-do > div{
+        width: 80%;
+    }
     div.card {
         width: calc(50% - 20px);
     }
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 990px) and (min-width: 768px) {
+    #what-i-do > div{
+        width: 45%;
+    }
     .lse-navbar-toggler {
         display: block;
     }

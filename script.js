@@ -23,12 +23,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.querySelectorAll('#nav-tabs-container li.nav-item').forEach(tabElt => {
-        tabElt.addEventListener("click", function () {
-            console.log("tabElt triggered");
+        tabElt.addEventListener("click", function (e) {            
+            const tabId = e.target.getAttribute('data-tab-content-id');
+            
             document.querySelector('#nav-tabs-container a.active').classList.remove("active");
+            
             tabElt.querySelector('a').classList.add("active");
+            
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove("d-block");
+                content.classList.add("d-none");
+            });
+            
+            document.getElementById(tabId).classList.remove("d-none");
+            document.getElementById(tabId).classList.add("d-block");
         });
     });
+    
 
 
     downloadCV.addEventListener("click", function (event) {

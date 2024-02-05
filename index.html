@@ -50,8 +50,8 @@
         <section id="landing-section">
             <div class="container py-5 my-5">
                 <h1 class="lse-text-blue">
-                    <span class="text-uppercase">laaraj</span>
-                    <span class="text-capitalize">Salaheddine</span>
+                    <span class="text-uppercase">Harvey</span>
+                    <span class="text-capitalize">reginalde spectre</span>
                 </h1>
                 <h2 class="text-capitalize lse-text-blue">
                     Web developer
@@ -61,9 +61,21 @@
                     <div id="personal-image">
                         <img src="./assets/images/avatar.png" alt="" srcset="" />
                     </div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Ut ac justo in libero scelerisque efficitur. Duis non condimentum arcu. Phasellus consequat neque eu dolor lacinia, a feugiat purus hendrerit. Integer vehicula velit vel ex dictum fermentum. Integer rhoncus ultricies neque, vel viverra sapien varius eu. Nam tristique, leo vel malesuada accumsan, justo metus consequat justo, sit amet venenatis nisi elit at justo. Etiam aliquet turpis sit amet interdum sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris lacinia hendrerit diam, sit amet scelerisque velit iaculis at.
-<br />
-Curabitur vestibulum elit vel urna accumsan, a condimentum sapien sagittis. Sed et dui sed justo rutrum accumsan. Integer a sapien vitae est vehicula consectetur. Sed vestibulum arcu non tincidunt feugiat. Proin eu tortor a lacus scelerisque posuere. Fusce gravida vitae sem non iaculis. Vestibulum dapibus nunc a quam ultrices, vel volutpat ipsum hendrerit. Maecenas vel arcu nec justo ultricies volutpat. Vivamus fermentum justo eu metus tincidunt, vel commodo orci pellentesque. Sed nec metus quam. Suspendisse potenti. Phasellus sodales neque vel arcu laoreet, vitae eleifend tellus posuere.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Ut ac justo in libero
+                    scelerisque efficitur. Duis non condimentum arcu. Phasellus consequat neque eu dolor lacinia, a
+                    feugiat purus hendrerit. Integer vehicula velit vel ex dictum fermentum. Integer rhoncus ultricies
+                    neque, vel viverra sapien varius eu. Nam tristique, leo vel malesuada accumsan, justo metus
+                    consequat justo, sit amet venenatis nisi elit at justo. Etiam aliquet turpis sit amet interdum
+                    sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas. Mauris lacinia hendrerit diam, sit amet scelerisque velit iaculis at.
+                    <br />
+                    Curabitur vestibulum elit vel urna accumsan, a condimentum sapien sagittis. Sed et dui sed justo
+                    rutrum accumsan. Integer a sapien vitae est vehicula consectetur. Sed vestibulum arcu non tincidunt
+                    feugiat. Proin eu tortor a lacus scelerisque posuere. Fusce gravida vitae sem non iaculis.
+                    Vestibulum dapibus nunc a quam ultrices, vel volutpat ipsum hendrerit. Maecenas vel arcu nec justo
+                    ultricies volutpat. Vivamus fermentum justo eu metus tincidunt, vel commodo orci pellentesque. Sed
+                    nec metus quam. Suspendisse potenti. Phasellus sodales neque vel arcu laoreet, vitae eleifend tellus
+                    posuere.
 
                     </p>
                     <div class="socials-cta-container text-center py-3">
@@ -110,7 +122,7 @@ Curabitur vestibulum elit vel urna accumsan, a condimentum sapien sagittis. Sed 
                     <span class="text-capitalize">work</span>
                 </h1>
                 <div class="d-flex flex-row justify-content-between flex-wrap">
-                    <div class="card my-1 mx-2">
+                    <div class="card my-1 mx-2" >
                         <div class="card-img-coontainer">
                             <img class="card-img-top" src="./assets/images/avatar.png" alt="Card image cap">
                         </div>
@@ -163,28 +175,85 @@ Curabitur vestibulum elit vel urna accumsan, a condimentum sapien sagittis. Sed 
                 <h1 class="lse-text-blue text-center my-3">
                     <span class="text-capitalize">portfolio</span>
                 </h1>
-                <!-- This boy should have some tabs [Skills, Technologies/tools, Career] -->
+                <!-- Navigation tabs [Skills, Technologies/tools, Career] -->
                 <div class="container" id="nav-tabs-container">
                     <ul class="nav nav-tabs">
                         <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="javascript:void(0)" data-role="what-i-do">what i
+                            <a class="nav-link active text-capitalize" href="javascript:void(0)"
+                                data-tab-content-id="what-i-do">what i
                                 do</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active text-capitalize" aria-current="page" href="javascript:void(0)"
-                                data-role="skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="javascript:void(0)" data-role="career">career</a>
+                            <a class="nav-link text-capitalize" aria-current="page" href="javascript:void(0)"
+                                data-tab-content-id="skills">Skills</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-capitalize" href="javascript:void(0)"
-                                data-role="edducation">education</a>
+                                data-tab-content-id="career">career</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-capitalize" href="javascript:void(0)"
+                                data-tab-content-id="education">education</a>
                         </li>
                     </ul>
                 </div>
+                <!-- Content -->
                 <div class="container" id="tab-elt-content">
-                    dd
+                    <div id="what-i-do" class="tab-content d-block d-flex flex-row justify-content-between flex-wrap p-5">
+                        <div class="d-flex flex-column justify-content-between flex-no-wrap border-out py-2 px-3">
+                            <div class="card-img-top">
+                                <img src="./assets/images/dev-card-image.svg" alt="...">
+                            </div>
+                            <div class="skill-set-container">
+                                <h5 class="card-title mt-3 mb-3 ">Technical</h5>
+                                <div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="text-capitalize">Design and build software</li>
+                                        <li class="text-capitalize">Design and maintain databases</li>
+                                        <li class="text-capitalize">Document code and functionalities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between flex-no-wrap  border-out py-2 my-3">
+                            <div class="card-img-top">
+                                <img src="./assets/images/collab-card-image.svg" alt="...">
+                            </div>
+                            <div class="skill-set-container">
+                                <h5 class="card-title mt-3 mb-3 ">Collaboration</h5>
+                                <div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="text-capitalize">Collaborate efficiently</li>
+                                        <li class="text-capitalize">Clear and understandable communication</li>
+                                        <li class="text-capitalize">Share knowledge and mentor juniors</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-column justify-content-between flex-no-wrap  border-out py-2 my-3">
+                            <div class="card-img-top">
+                                <img src="./assets/images/pm-card-image.svg" alt="...">
+                            </div>
+                            <div class="skill-set-container">
+                                <h5 class="card-title mt-3 mb-3 ">Project Management</h5>
+                                <div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="text-capitalize">Apply Agile methodologies</li>
+                                        <li class="text-capitalize">Continuous integration &amp; delivery (CI/CD)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="skills" class="tab-content d-none">
+                        Skills
+                    </div>
+                    <div id="career" class="tab-content d-none">
+                        career
+                    </div>
+                    <div id="education" class="tab-content d-none">
+                        education
+                    </div>
                 </div>
             </div>
         </section>
@@ -277,7 +346,7 @@ Curabitur vestibulum elit vel urna accumsan, a condimentum sapien sagittis. Sed 
                     </a>
                 </li>
             </ul>
-            <p class="text-center text-muted my-2">&copy; <span>2023</span> Salaheddine LAARAJ</p>
+            <p class="text-center text-muted my-2">&copy; <span>2024</span> Salaheddine LAARAJ</p>
         </div>
     </footer>
     <script src="script.js"></script>
