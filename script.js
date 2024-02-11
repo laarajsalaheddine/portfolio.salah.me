@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
     const downloadCVDropDown = document.getElementById('download-cv-dropdown-content');
     const downloadCV = document.getElementById('download-cv');
+    /* **** Document event
+        - Hides the dropdown menu
+        - Hides the CV download btn
+    */
     document.addEventListener("click", function (event) {
         const navbarTogglerBtn = document.querySelector('.lse-navbar-toggler');
         const navbarTogglerNav = document.getElementById('navbarToggler');
