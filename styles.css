@@ -9,6 +9,10 @@
     --baby-blue: #e3f7ff;
     --charcoal: #22303C;
 }
+body{
+    background-color: var(--charcoal);
+    color: var(--baby-blue);
+}
 
 * {
     font-family: "Lato", sans-serif;
