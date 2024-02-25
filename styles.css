@@ -46,9 +46,10 @@ h6 {
     border: 1px solid #fff;
 }
 
-ul.navbar-nav>li.nav-item{
+ul.navbar-nav>li.nav-item {
     position: relative;
 }
+
 ul.navbar-nav>li.nav-item::after {
     content: '';
     position: absolute;
@@ -61,31 +62,85 @@ ul.navbar-nav>li.nav-item::after {
     transition: width 0.3s ease;
 }
 
-ul.navbar-nav>li.nav-item:hover::after, ul.navbar-nav>li.nav-item.active::after {
+ul.navbar-nav>li.nav-item:hover::after,
+ul.navbar-nav>li.nav-item.active::after {
     width: 100%;
 }
-ul.navbar-nav a#custom-cta{
+
+/* a#custom-cta{
     background-color: var(--goldenrod);
 }
-ul.navbar-nav a#custom-cta:hover{
+a#custom-cta:hover{
     background-color: var(--hover-goldenrod);
+} */
+.cta-container>a {
+    /* text-shadow: 1px 1px 2px var(--goldenrod); */
+    transition: 0.3s ease all;
+    animation: ctashake 1s ease normal infinite;
 }
 
-div.nav-bar-scroll-shadow{
-    box-shadow: 0px 2px 5px 0px rgba(255,255,255,1);
+.cta-container>a:hover {
+    background-color: var(--goldenrod) !important;
+    color: var(--charcoal) !important;
+}
+.cta-container>a:hover > i{
+    color: var(--charcoal) !important;
+}
+
+div.nav-bar-scroll-shadow {
+    box-shadow: 0px 2px 5px 0px rgba(255, 255, 255, 1);
     background-color: var(--charcoal);
 }
+
 #navbarToggler {
     width: inherit;
     margin: auto;
 }
 
-
-@media only screen and (max-width: 768px) {
-    ul.navbar-nav:nth-of-type(1) {
-        padding: 50px;
-      }
+span.top-skill {
+    background-color: var(--cadet-blue);
+    color: var(--charcoal) !important;
 }
+
+section#landing-section {
+    min-height: 99vh;
+}
+
+@media only screen and (max-width: 768px) {}
+
+@keyframes ctashake {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+    }
+
+    10% {
+        transform: rotate(2deg);
+    }
+
+    20%,
+    40%,
+    60% {
+        transform: rotate(-2deg);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: rotate(2deg);
+    }
+
+    80% {
+        transform: rotate(2deg);
+    }
+
+    90% {
+        transform: rotate(2deg);
+    }
+}
+
 /*
     
 .lse-navbar-toggler {
@@ -125,9 +180,7 @@ section {
     min-height: 50vh;
 }
 
-section#landing-section {
-    min-height: 95vh;
-}
+
 
 
 .bar1,

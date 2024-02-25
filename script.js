@@ -46,13 +46,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    downloadCV.addEventListener("click", function (event) {
-        downloadCVDropDown.classList.toggle('d-none');
-    });
+    // downloadCV.addEventListener("click", function (event) {
+    //     downloadCVDropDown.classList.toggle('d-none');
+    // });
 
-    // document.body.onscroll = function () {
-    //     let navBar = document.getElementById("navbarToggler");
-    //     let fix_navbar_flag = document.body.scrollTop > 50 || document.documentElement.scrollTop > 50;
-    //     navBar.classList.toggle('nav-bar-scroll-shadow', fix_navbar_flag);
-    // };
+    document.body.onscroll = function () {
+        let navBar = document.getElementById("navbarToggler");
+        let fix_navbar_flag = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
+        navBar.classList.toggle('nav-bar-scroll-shadow', fix_navbar_flag);
+    };
 });

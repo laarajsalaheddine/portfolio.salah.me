@@ -24,25 +24,25 @@
                 <div class="bar bar2"></div>
                 <div class="bar bar3"></div>
             </div>
-            <div class="text-center rounded p-2 d-inline-flex flex-row justify-content-between nav-bar-scroll-shadow"
-                id="navbarToggler">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 border-out">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home</a>
+            <div class="text-center rounded p-2 d-inline-flex flex-row justify-content-center" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active mx-1">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-house mx-1"></i>
+                            Home
+                        </a>
                     </li>
-                    <li class="nav-item text-capitalize">
-                        <a class="nav-link" href="#work">work</a>
+                    <li class="nav-item text-capitalize mx-1">
+                        <a class="nav-link" href="#work">
+                            <i class="fa-solid fa-screwdriver-wrench mx-1"></i>
+                            work
+                        </a>
                     </li>
-                    <li class="nav-item text-capitalize">
-                        <a class="nav-link" href="#portfolio">portfolio</a>
-                    </li>
-                    <li class="nav-item text-capitalize">
-                        <a class="nav-link" href="#contact">contact</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 border-out">
-                    <li class="text-capitalize">
-                        <a id="custom-cta" class="nav-link rounded" href="./contact/">Reach out</a>
+                    <li class="nav-item text-capitalize mx-1">
+                        <a class="nav-link" href="#portfolio">
+                            <i class="fa-solid fa-briefcase mx-1"></i>
+                            portfolio
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -50,38 +50,48 @@
     </nav>
     <main>
         <!-- *********** [-- landing-section --] ************ -->
-        <section id="landing-section">
+        <section id="landing-section" class="d-flex flex-column justify-content-center align-items-center">
             <div class="container py-5 my-5">
-                <h1>
-                    <span class="text-uppercase">Harvey</span>
-                    <span class="text-capitalize">reginalde spectre</span>
-                </h1>
-                <h2 class="text-capitalize">
+                <!-- <h1 class="text-center">
+                    <span class="text-uppercase">laaraj</span>
+                    <span class="text-capitalize">Salaheddine</span>
+                </h1> -->
+                <h1 class="text-capitalize text-center">
                     Web developer
-                </h2>
-                <div>
-                    <p>
-                    <!-- <div id="personal-image">
+                </h1>
+                <div id="landing-section-container">
+                    <p class="text-center">
+                        Skilled in web development, I'm passionate about creating web solutions
+
+                        <!-- <div id="personal-image">
                         <img src="./assets/images/avatar.png" alt="" srcset="" />
                     </div> -->
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Ut ac justo in libero
-                    scelerisque efficitur. Duis non condimentum arcu. Phasellus consequat neque eu dolor lacinia, a
-                    feugiat purus hendrerit. Integer vehicula velit vel ex dictum fermentum. Integer rhoncus ultricies
-                    neque, vel viverra sapien varius eu. Nam tristique, leo vel malesuada accumsan, justo metus
-                    consequat justo, sit amet venenatis nisi elit at justo. Etiam aliquet turpis sit amet interdum
-                    sollicitudin. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
-                    egestas. Mauris lacinia hendrerit diam, sit amet scelerisque velit iaculis at.
-                    <br />
-                    Curabitur vestibulum elit vel urna accumsan, a condimentum sapien sagittis. Sed et dui sed justo
-                    rutrum accumsan. Integer a sapien vitae est vehicula consectetur. Sed vestibulum arcu non tincidunt
-                    feugiat. Proin eu tortor a lacus scelerisque posuere. Fusce gravida vitae sem non iaculis.
-                    Vestibulum dapibus nunc a quam ultrices, vel volutpat ipsum hendrerit. Maecenas vel arcu nec justo
-                    ultricies volutpat. Vivamus fermentum justo eu metus tincidunt, vel commodo orci pellentesque. Sed
-                    nec metus quam. Suspendisse potenti. Phasellus sodales neque vel arcu laoreet, vitae eleifend tellus
-                    posuere.
-
                     </p>
-                    <div class="socials-cta-container text-center py-3">
+                    <p class="text-center">
+                        Here's a selection of my top skills
+                    </p>
+                    <div class="top-skills-container text-center">
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">PHP Frameworks</span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">SQL databases</span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">jQuery</span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">Linux</span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">JEE</span>
+                    </div>
+                    <div id="cta-container" class="cta-container text-center p-5">
+                        <a class="d-inline-block btn mx-2" href="javascript:void(0)">
+                            <i class="fa-solid fa-download mx-1"></i>
+                            full resumé
+                        </a>
+                        <a class="d-inline-block btn mx-2" href="javascript:void(0)">
+                            <i class="fa-solid fa-link mx-1"></i>
+                            links
+                        </a>
+                        <a class="d-inline-block btn mx-2" href="./contact/">
+                            <i class="fa-solid fa-envelope mx-1"></i>
+                            Reach out
+                        </a>
+                    </div>
+                    <!-- <div class="socials-cta-container text-center py-3">
                         <a href="https://github.com/laarajsalaheddine/" target="_blank"
                             class="btn btn-default text-capitalize my-1 mx-1 cta-default" title="Github"
                             id="socials-cta-github">
@@ -114,7 +124,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
