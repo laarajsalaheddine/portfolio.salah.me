@@ -71,14 +71,43 @@
                         Here's a selection of my top skills
                     </p>
                     <div class="top-skills-container text-center">
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">PHP Frameworks</span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">SQL databases</span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">jQuery</span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">Linux</span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 rounded">JEE</span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
+                            <i class="fa-regular fa-gem"></i>
+                            PHP Frameworks
+                        </span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
+                            <i class="fa-regular fa-gem"></i>
+                            SQL databases
+                        </span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
+                            <i class="fa-regular fa-gem"></i>
+                            jQuery
+                        </span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
+                            <i class="fa-regular fa-gem"></i>
+                            Linux
+                        </span>
+                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
+                            <i class="fa-regular fa-gem"></i>
+                            JEE
+                        </span>
                     </div>
-                    <div id="cta-container" class="cta-container text-center p-5">
-                        <a class="d-inline-block btn mx-2" href="javascript:void(0)">
+                    <div id="cta-container" class="cta-container text-center py-3">
+                        <div class="d-inline-block" id="resume-download-container">
+                            <div class="dropdown-content bounce-in-top d-none" id="download-cv-dropdown-content">
+                                <a title="cv in French" class="text-center d-block p-1"
+                                    download="./assets/files/cv-placeholder.pdf"
+                                    href="./assets/files/cv-placeholder.pdf">
+                                    French
+                                </a>
+                                <a title="cv in English" class="text-center d-block p-1"
+                                    download="./assets/files/cv-placeholder.pdf"
+                                    href="./assets/files/cv-placeholder.pdf">
+                                    English
+                                </a>
+                            </div>
+                        </div>
+                        <a id="resume-download" class="d-inline-block btn mx-2" href="javascript:void(0)">
                             <i class="fa-solid fa-download mx-1"></i>
                             full resumé
                         </a>
@@ -271,76 +300,7 @@
                 </div>
             </div>
         </section>
-        <!-- *********** [-- Contact --] ************ -->
-        <section id="contact" class="my-2 mb-5">
-            <div class="container">
-                <h1 class=" text-center my-3">
-                    <span class="text-capitalize">Contact</span>
-                </h1>
-                <div class="contact-form">
-                    <div class="contact-additional-info">
-                        <div class="phone-number my-1">
-                            <i class="fa-solid fa-phone text-primary"></i>
-                            <i class="fa-brands fa-whatsapp text-success"></i>
-                            <span><a href="tel:+212639851503">
-                                    +212 639851503
-                                </a></span>
-                        </div>
-                        <div class="location my-1">
-                            <i class="fa-solid fa-location-dot text-danger"></i>
-                            <span>
-                                Morocco, Casablanca, Metro Area
-                            </span>
-                        </div>
-                        <div class="text-primary linkedin my-1">
-                            <i class="fab fa-linkedin"></i>
-                            <a title="Linkedin" href="https://www.linkedin.com/" target="_blank">Linkedin </a>
-                        </div>
-                    </div>
-                    <form method="post">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group my-3">
-                                    <input autocomplete="off" required type="text" name="txtName" class="form-control"
-                                        placeholder="Your Name (*)" value="" />
-                                </div>
-                                <div class="form-group my-3">
-                                    <input autocomplete="off" type="text" name="txtPhone" class="form-control"
-                                        placeholder="Your Phone Number" value="" />
-                                </div>
-                                <div class="form-group my-3">
-                                    <input autocomplete="off" type="text" name="org" class="form-control"
-                                        placeholder="Your Organization" value="" />
-                                </div>
-                                <div class="form-group my-3">
-                                    <input autocomplete="off" required type="text" name="txtEmail" class="form-control"
-                                        placeholder="Your Email (*)" value="" />
-                                </div>
-                                <div class="form-group my-3">
-                                    <input autocomplete="off" type="text" name="subject" class="form-control"
-                                        placeholder="Subject" value="" />
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group my-3">
-                                    <textarea required name="txtMsg" class="form-control" placeholder="Your Message (*)"
-                                        style="width: 100%; height: 250px"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <button required type="submit" name="btnSubmit" id="btnContact"
-                                        class="btn btn-default px-5" value="Send ">
-                                        Send
-                                        <i class="fa fa-paper-plane" aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
+
 
     </main>
     <footer class="py-1 my-1">
