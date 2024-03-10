@@ -46,35 +46,33 @@ h6 {
     border: 1px solid #fff;
 }
 
-ul.navbar-nav>li.nav-item {
+#navbarToggler ul>li {
     position: relative;
 }
 
-ul.navbar-nav>li.nav-item::after {
+#navbarToggler ul>li::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    top: 120%;
     left: 50%;
     width: 0;
     height: 2px;
-    background-color: #fff;
+    background-color: var(--baby-blue);
     transform: translateX(-50%);
     transition: width 0.3s ease;
 }
 
-ul.navbar-nav>li.nav-item:hover::after,
-ul.navbar-nav>li.nav-item.active::after {
+#navbarToggler ul>li:hover::after,
+#navbarToggler ul>li.active::after {
     width: 100%;
 }
 
-/* a#custom-cta{
-    background-color: var(--goldenrod);
+.top-skills-container,
+.cta-container {
+    user-select: none;
 }
-a#custom-cta:hover{
-    background-color: var(--hover-goldenrod);
-} */
+
 .cta-container>a {
-    /* text-shadow: 1px 1px 2px var(--goldenrod); */
     transition: 0.3s ease all;
     animation: ctashake 1s ease normal infinite;
 }
@@ -82,6 +80,7 @@ a#custom-cta:hover{
 .cta-container>a:hover {
     background-color: var(--goldenrod) !important;
     color: var(--charcoal) !important;
+    box-shadow: 0px 0px 5px 5px var(--hover-goldenrod);
 }
 
 .cta-container>a:hover>i {
@@ -90,43 +89,25 @@ a#custom-cta:hover{
 
 div.nav-bar-scroll-shadow {
     box-shadow: 0px 2px 5px 0px rgba(255, 255, 255, 1);
-    background-color: var(--charcoal);
 }
 
 #navbarToggler {
     width: inherit;
     margin: auto;
+    background-color: var(--charcoal) !important;
+    text-align: center;
 }
 
-.lse-navbar-toggler {
-    display: none;
-    z-index: 99999;
-    position: absolute;
-    top: 25px;
-    left: 25px;
+#navbarToggler ul {
+    margin: 0px;
+    padding: 5px 15px;
 }
 
-.bar1,
-.bar2,
-.bar3 {
-    width: 30px;
-    height: 3px;
-    background-color: var(--baby-blue);
-    margin: 6px 0;
-    transition: 0.4s;
+#navbarToggler ul>li {
+    display: inline-block !important;
+    margin: 1px 5px;
 }
 
-.change .bar1 {
-    transform: translate(0, 7px) rotate(-45deg);
-}
-
-.change .bar2 {
-    opacity: 0;
-}
-
-.change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
-}
 
 span.top-skill {
     background-color: var(--cadet-blue);
@@ -141,14 +122,16 @@ section#landing-section {
     min-height: 99vh;
 }
 
+#links-container,
 #resume-download-container {
     position: relative;
 }
 
+#links-content,
 #download-cv-dropdown-content {
     position: absolute;
     border: 1px solid var(--charcoal);
-    width: 200px;
+    width: 150px;
     border-radius: 7px;
     padding: 0px;
     top: 25px;
@@ -156,13 +139,24 @@ section#landing-section {
     box-shadow: 0px 0px 5px 0px var(--cadet-blue);
 }
 
-#download-cv-dropdown-content>a {
+#download-cv-dropdown-content>a,
+#links-content>a {
     text-decoration: none;
     border-radius: 7px;
 }
 
-#download-cv-dropdown-content>a:hover {
+#links-content>a {
+    text-align: left !important;
+}
+
+#download-cv-dropdown-content>a:hover,
+#links-content>a:hover {
     background: var(--goldenrod);
+    color: var(--charcoal) !important;
+}
+
+#download-cv-dropdown-content>a:hover>i,
+#links-content>a:hover>i {
     color: var(--charcoal) !important;
 }
 
@@ -170,15 +164,20 @@ section#landing-section {
     -webkit-animation: bounce-in-top .5s both;
     animation: bounce-in-top .5s both;
 }
+a.btn-reach-out,a.btn-reach-out>i  {
+    background: var(--goldenrod);
+    color: var(--charcoal) !important;
+}
+
+a.btn-reach-out:hover{
+    box-shadow: 0px 0px 5px 5px var(--hover-goldenrod);
+}
 
 @media only screen and (max-width: 768px) {
-    .lse-navbar-toggler {
-        display: block;
-    }
-
     #navbarToggler {
         height: fit-content;
     }
+
 }
 
 @-webkit-keyframes bounce-in-top {
@@ -240,7 +239,7 @@ section#landing-section {
 
 /*
     
-.lse-navbar-toggler {
+.burger-btn-navbar-toggler {
     display: none;
 }
 
@@ -440,11 +439,11 @@ h5.card-title {
         width: 90%;
     }
 
-    .lse-navbar-toggler {
+    .burger-btn-navbar-toggler {
         display: block;
     }
 
-    ul.navbar-nav {
+    #navbarToggler ul {
         min-width: fit-content;
         margin: auto;
         width: 50%;
@@ -479,7 +478,7 @@ h5.card-title {
         width: 80%;
     }
 
-    .lse-navbar-toggler {
+    .burger-btn-navbar-toggler {
         display: block;
     }
 
@@ -503,7 +502,7 @@ h5.card-title {
         width: 45%;
     }
 
-    .lse-navbar-toggler {
+    .burger-btn-navbar-toggler {
         display: block;
     }
 

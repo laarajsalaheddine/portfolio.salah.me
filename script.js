@@ -1,20 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
     const downloadCVDropDown = document.getElementById('download-cv-dropdown-content');
+    const linksContent = document.getElementById('links-content');
     const resumeDownload = document.getElementById('resume-download');
+    const linksCTA = document.getElementById('links-cta');
     const navBar = document.getElementById("navbarToggler");
-    const navbarTogglerBtn = document.querySelector('.lse-navbar-toggler');
+    const navbarNavMenu = document.querySelector('ul.navbar-nav');
+
     document.addEventListener("click", function (event) {
-
         const navbarTogglerNav = document.getElementById('navbarToggler');
-        const isNavbarToggler = event.target.classList.contains('lse-navbar-toggler') ||
-            event.target.parentNode.classList.contains('lse-navbar-toggler');
+        const isNavbarToggler = event.target.classList.contains('burger-btn-navbar-toggler') ||
+            event.target.parentNode.classList.contains('burger-btn-navbar-toggler');
 
-        navbarTogglerBtn.classList.toggle("change", isNavbarToggler);
         navbarTogglerNav.classList.toggle("show", isNavbarToggler);
         navbarTogglerNav.classList.toggle("nav-bar-scroll-shadow", isNavbarToggler);
 
         if (!(event.target.parentNode.id.trim() == "resume-download" || event.target.id.trim() == "resume-download")) {
             downloadCVDropDown.classList.add('d-none');
+        }
+        if (!(event.target.parentNode.id.trim() == "links-cta" || event.target.id.trim() == "links-cta")) {
+            linksContent.classList.add('d-none');
         }
     });
 
@@ -27,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function () {
     resumeDownload.addEventListener("click", function (event) {
         if (downloadCVDropDown.classList.contains('d-none')) {
             downloadCVDropDown.classList.remove('d-none');
+        }
+    });
+    linksCTA.addEventListener("click", function (event) {
+        if (linksContent.classList.contains('d-none')) {
+            linksContent.classList.remove('d-none');
         }
     });
     document.querySelectorAll('#nav-tabs-container li.nav-item').forEach(tabElt => {
@@ -47,24 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-
-    // downloadCV.addEventListener("click", function (event) {
-    //     downloadCVDropDown.classList.toggle('d-none');
-    // });
-
-
-    if (window.matchMedia('screen and (max-width: 768px)').matches) {
-        console.log("--- is mobile view");
-        // must check if the 
-        if (navbarTogglerBtn.classList.contains('change')) {
-            navBar.classList.add('nav-bar-scroll-shadow');
-        }
-    } else {
-        console.log("is not -----");
-        document.body.onscroll = function () {
-            let fix_navbar_flag = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
-            navBar.classList.toggle('nav-bar-scroll-shadow', fix_navbar_flag);
-        };
-    }
+    document.body.onscroll = function () {
+        let fix_navbar_flag = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
+        navBar.classList.toggle('nav-bar-scroll-shadow', fix_navbar_flag);
+    };
 });

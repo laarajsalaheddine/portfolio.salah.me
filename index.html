@@ -19,13 +19,8 @@
 <body>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div class="lse-navbar-toggler">
-                <div class="bar bar1"></div>
-                <div class="bar bar2"></div>
-                <div class="bar bar3"></div>
-            </div>
-            <div class="text-center rounded p-2 d-inline-flex flex-row justify-content-center" id="navbarToggler">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <div class="rounded p-2" id="navbarToggler">
+                <ul>
                     <li class="nav-item active mx-1">
                         <a class="nav-link" href="#">
                             <i class="fa-solid fa-house mx-1"></i>
@@ -61,7 +56,7 @@
                 </h1>
                 <div id="landing-section-container">
                     <p class="text-center">
-                        Skilled in web development, I'm passionate about creating web solutions
+                        Passionate Web Developer with a strong inclination towards Backend Development, but also proficient in Full Stack Development
 
                         <!-- <div id="personal-image">
                         <img src="./assets/images/avatar.png" alt="" srcset="" />
@@ -93,6 +88,9 @@
                         </span>
                     </div>
                     <div id="cta-container" class="cta-container text-center py-3">
+                        <!-- 
+                            this is the cv version container
+                         -->
                         <div class="d-inline-block" id="resume-download-container">
                             <div class="dropdown-content bounce-in-top d-none" id="download-cv-dropdown-content">
                                 <a title="cv in French" class="text-center d-block p-1"
@@ -107,53 +105,38 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- ----------------------------- -->
                         <a id="resume-download" class="d-inline-block btn mx-2" href="javascript:void(0)">
                             <i class="fa-solid fa-download mx-1"></i>
                             full resumé
                         </a>
-                        <a class="d-inline-block btn mx-2" href="javascript:void(0)">
-                            <i class="fa-solid fa-link mx-1"></i>
-                            links
-                        </a>
-                        <a class="d-inline-block btn mx-2" href="./contact/">
-                            <i class="fa-solid fa-envelope mx-1"></i>
-                            Reach out
-                        </a>
-                    </div>
-                    <!-- <div class="socials-cta-container text-center py-3">
-                        <a href="https://github.com/laarajsalaheddine/" target="_blank"
-                            class="btn btn-default text-capitalize my-1 mx-1 cta-default" title="Github"
-                            id="socials-cta-github">
-                            <i class="fa-brands fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/laarajsalaheddine/" target="_blank"
-                            class="btn btn-default text-capitalize my-1 mx-1 cta-default" title="linkedin"
-                            id="socials-cta-linkedin">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                        <a href="#contact" class="btn btn-default text-capitalize my-1 mx-1 cta-default" title="Contact"
-                            id="socials-cta-contact">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                        <div class="d-inline-block" id="download-cv-container">
-                            <a href="javascript:void(0)" class="btn btn-default text-capitalize my-1 mx-1 cta-default"
-                                title="Download CV" id="download-cv">
-                                <i class="fa-solid fa-file-arrow-down"></i>
-                            </a>
-                            <div class="dropdown-content bounce-in-top d-none" id="download-cv-dropdown-content">
-                                <a title="cv in French" class="text-center d-block p-1"
-                                    download="./assets/files/cv-placeholder.pdf"
-                                    href="./assets/files/cv-placeholder.pdf">
-                                    French
+                        <!-- 
+                            this is the social links container
+                         -->
+                        <div class="d-inline-block" id="links-container">
+                            <div id="links-content" class="bounce-in-top d-none">
+                                <a title="cv in English" class="text-center text-capitalize d-block p-1" target="_blank"
+                                    href="https://github.com/laarajsalaheddine/">
+                                    <i class="fa-brands fa-github d-inline-block mx-2"></i>
+                                    Github
                                 </a>
-                                <a title="cv in English" class="text-center d-block p-1"
-                                    download="./assets/files/cv-placeholder.pdf"
-                                    href="./assets/files/cv-placeholder.pdf">
-                                    English
+                                <a title="cv in English" class="text-center text-capitalize d-block p-1" target="_blank"
+                                    href="https://www.linkedin.com/in/laarajsalaheddine/">
+                                    <i class="fa-brands fa-linkedin d-inline-block mx-2"></i>
+                                    linkedin
                                 </a>
                             </div>
                         </div>
-                    </div> -->
+                        <!-- ----------------------------- -->
+                        <a id="links-cta" class="d-inline-block btn mx-2" href="javascript:void(0)">
+                            <i class="fa-solid fa-link mx-1"></i>
+                            links
+                        </a>
+                        <a class="d-inline-block btn mx-2 btn-reach-out" href="#contact">
+                            <i class="fa-solid fa-envelope mx-1"></i>
+                            Reach out
+                        </a>
+                    </div>                    
                 </div>
             </div>
         </section>
