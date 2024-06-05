@@ -8,303 +8,73 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"
         data-library="bootstrap">
+    <style>
+        .img-container {
+            width: 100%;
+            height: 50vh;
+        }
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="./styles.css">
+        .img-container img {
+            width: 65%;
+            height: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <div class="rounded p-2" id="navbarToggler">
-                <ul>
-                    <li class="nav-item active mx-1">
-                        <a class="nav-link" href="#">
-                            <i class="fa-solid fa-house mx-1"></i>
-                            Home
-                        </a>
-                    </li>
-                    <li class="nav-item text-capitalize mx-1">
-                        <a class="nav-link" href="#work">
-                            <i class="fa-solid fa-screwdriver-wrench mx-1"></i>
-                            work
-                        </a>
-                    </li>
-                    <li class="nav-item text-capitalize mx-1">
-                        <a class="nav-link" href="#portfolio">
-                            <i class="fa-solid fa-briefcase mx-1"></i>
-                            portfolio
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <div class="container mt-2">
+        <h1 class="text-center">
+            Thank you for visiting my website.
+        </h1>
+        <h2 class="text-center">
+            In order to improve the experience and design, I'm currently performing maintenance and updates on this
+            page.
+        </h2>
+        <h3 class="text-center">
+            <p>Estimated Downtime:</p>
+            Start: <span id="start-date"></span>
+            <br>
+            End: <span id="end-date"></span>
+        </h3>
+    </div>
+    <div class="container text-center mt-2">
+        <div class="img-container">
+            <img src="fix.svg" alt="maintenance" srcset="">
         </div>
-    </nav>
-    <main>
-        <!-- *********** [-- landing-section --] ************ -->
-        <section id="landing-section" class="d-flex flex-column justify-content-center align-items-center">
-            <div class="container py-5 my-5">
-                <!-- <h1 class="text-center">
-                    <span class="text-uppercase">laaraj</span>
-                    <span class="text-capitalize">Salaheddine</span>
-                </h1> -->
-                <h1 class="text-capitalize text-center">
-                    Web developer
-                </h1>
-                <div id="landing-section-container">
-                    <p class="text-center">
-                        Passionate Web Developer with a strong inclination towards Backend Development, but also proficient in Full Stack Development
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function (event) {
+            function getCurrentDateAndFutureDate() {
+                var currentDate = new Date();
 
-                        <!-- <div id="personal-image">
-                        <img src="./assets/images/avatar.png" alt="" srcset="" />
-                    </div> -->
-                    </p>
-                    <p class="text-center">
-                        Here's a selection of my top skills
-                    </p>
-                    <div class="top-skills-container text-center">
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
-                            <i class="fa-regular fa-gem"></i>
-                            PHP Frameworks
-                        </span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
-                            <i class="fa-regular fa-gem"></i>
-                            SQL databases
-                        </span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
-                            <i class="fa-regular fa-gem"></i>
-                            jQuery
-                        </span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
-                            <i class="fa-regular fa-gem"></i>
-                            Linux
-                        </span>
-                        <span class="top-skill d-inline-block px-3 py-1 mx-2 my-1 rounded">
-                            <i class="fa-regular fa-gem"></i>
-                            JEE
-                        </span>
-                    </div>
-                    <div id="cta-container" class="cta-container text-center py-3">
-                        <!-- 
-                            this is the cv version container
-                         -->
-                        <div class="d-inline-block" id="resume-download-container">
-                            <div class="dropdown-content bounce-in-top d-none" id="download-cv-dropdown-content">
-                                <a title="cv in French" class="text-center d-block p-1"
-                                    download="./assets/files/cv-placeholder.pdf"
-                                    href="./assets/files/cv-placeholder.pdf">
-                                    French
-                                </a>
-                                <a title="cv in English" class="text-center d-block p-1"
-                                    download="./assets/files/cv-placeholder.pdf"
-                                    href="./assets/files/cv-placeholder.pdf">
-                                    English
-                                </a>
-                            </div>
-                        </div>
-                        <!-- ----------------------------- -->
-                        <a id="resume-download" class="d-inline-block btn mx-2" href="javascript:void(0)">
-                            <i class="fa-solid fa-download mx-1"></i>
-                            full resumé
-                        </a>
-                        <!-- 
-                            this is the social links container
-                         -->
-                        <div class="d-inline-block" id="links-container">
-                            <div id="links-content" class="bounce-in-top d-none">
-                                <a title="cv in English" class="text-center text-capitalize d-block p-1" target="_blank"
-                                    href="https://github.com/laarajsalaheddine/">
-                                    <i class="fa-brands fa-github d-inline-block mx-2"></i>
-                                    Github
-                                </a>
-                                <a title="cv in English" class="text-center text-capitalize d-block p-1" target="_blank"
-                                    href="https://www.linkedin.com/in/laarajsalaheddine/">
-                                    <i class="fa-brands fa-linkedin d-inline-block mx-2"></i>
-                                    linkedin
-                                </a>
-                            </div>
-                        </div>
-                        <!-- ----------------------------- -->
-                        <a id="links-cta" class="d-inline-block btn mx-2" href="javascript:void(0)">
-                            <i class="fa-solid fa-link mx-1"></i>
-                            links
-                        </a>
-                        <a class="d-inline-block btn mx-2 btn-reach-out" href="#contact">
-                            <i class="fa-solid fa-envelope mx-1"></i>
-                            Reach out
-                        </a>
-                    </div>                    
-                </div>
-            </div>
-        </section>
-        <!-- *********** [-- Work --] ************ -->
-        <section id="work" class="my-2">
-            <div class="container">
-                <h1 class="text-center my-3">
-                    <span class="text-capitalize">work</span>
-                </h1>
-                <div class="d-flex flex-row justify-content-between flex-wrap">
-                    <div class="card my-1 mx-2">
-                        <div class="card-img-coontainer">
-                            <img class="card-img-top" src="./assets/images/avatar.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn cta-default">view details</a>
-                        </div>
-                    </div>
-                    <div class="card my-1 mx-2">
-                        <div class="card-img-coontainer">
-                            <img class="card-img-top" src="./assets/images/avatar.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn cta-default">view details</a>
-                        </div>
-                    </div>
-                    <div class="card my-1 mx-2">
-                        <div class="card-img-coontainer">
-                            <img class="card-img-top" src="./assets/images/avatar.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn cta-default">view details</a>
-                        </div>
-                    </div>
-                    <div class="card my-1 mx-2">
-                        <div class="card-img-coontainer">
-                            <img class="card-img-top" src="./assets/images/avatar.png" alt="Card image cap">
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-                            <a href="#" class="btn cta-default">view details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- *********** [-- portfolio --] ************ -->
-        <section id="portfolio" class="my-2">
-            <div class="container">
-                <h1 class=" text-center my-3">
-                    <span class="text-capitalize">portfolio</span>
-                </h1>
-                <!-- Navigation tabs [Skills, Technologies/tools, Career] -->
-                <div class="container" id="nav-tabs-container">
-                    <ul class="nav nav-tabs">
-                        <li class="nav-item">
-                            <a class="nav-link active text-capitalize" href="javascript:void(0)"
-                                data-tab-content-id="what-i-do">what i
-                                do</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" aria-current="page" href="javascript:void(0)"
-                                data-tab-content-id="skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="javascript:void(0)"
-                                data-tab-content-id="career">career</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-capitalize" href="javascript:void(0)"
-                                data-tab-content-id="education">education</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Content -->
-                <div class="container" id="tab-elt-content">
-                    <div id="what-i-do"
-                        class="tab-content d-block d-flex flex-row justify-content-between flex-wrap p-5">
-                        <div class="d-flex flex-column justify-content-around flex-no-wrap py-2 px-3 px-2">
-                            <div class="what-i-do-img card-img-top">
-                                <img src="./assets/images/dev-card-image.svg" alt="...">
-                            </div>
-                            <div class="skill-set-container">
-                                <h5 class="card-title mt-3 mb-3 ">Technical</h5>
-                                <div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="text-capitalize">Design and build software</li>
-                                        <li class="text-capitalize">Design and maintain databases</li>
-                                        <li class="text-capitalize">Document code and functionalities</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column justify-content-around flex-no-wrap py-2 px-3 px-2">
-                            <div class="what-i-do-img card-img-top">
-                                <img src="./assets/images/collab-card-image.svg" alt="...">
-                            </div>
-                            <div class="skill-set-container">
-                                <h5 class="card-title mt-3 mb-3 ">Collaboration</h5>
-                                <div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="text-capitalize">Collaborate efficiently</li>
-                                        <li class="text-capitalize">Clear and understandable communication</li>
-                                        <li class="text-capitalize">Share knowledge and mentor juniors</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="d-flex flex-column justify-content-around flex-no-wrap  py-2 px-3 px-2">
-                            <div class="what-i-do-img card-img-top">
-                                <img src="./assets/images/pm-card-image.svg" alt="...">
-                            </div>
-                            <div class="skill-set-container">
-                                <h5 class="card-title mt-3 mb-3 ">Project Management</h5>
-                                <div>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="text-capitalize">Apply Agile methodologies</li>
-                                        <li class="text-capitalize">Continuous integration &amp; delivery (CI/CD)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="skills" class="tab-content d-none">
-                        Skills
-                    </div>
-                    <div id="career" class="tab-content d-none">
-                        career
-                    </div>
-                    <div id="education" class="tab-content d-none">
-                        education
-                    </div>
-                </div>
-            </div>
-        </section>
+                var futureDate = new Date(currentDate);
+                futureDate.setDate(futureDate.getDate() + 2);
 
+                function formatDate(date) {
+                    var d = new Date(date),
+                        month = '' + (d.getMonth() + 1),
+                        day = '' + d.getDate(),
+                        year = d.getFullYear();
 
-    </main>
-    <footer class="py-1 my-1">
-        <div class="container">
-            <ul class="nav justify-content-center border-bottom py-1 my-1">
-                <li class="nav-item text-capitalize" title="Github">
-                    <a href="https://www.linkedin.com/in/laarajsalaheddine/" target="_blank"
-                        class="nav-link px-2 text-muted">
-                        <i class="fa-brands fa-github"></i>
-                    </a>
-                </li>
-                <li class="nav-item text-capitalize" title="linkedin">
-                    <a href="https://github.com/laarajsalaheddine/" target="_blank" class="nav-link px-2 text-muted">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </li>
-            </ul>
-            <p class="text-center text-muted my-2">&copy; <span>2024</span> Salaheddine LAARAJ</p>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+                    if (month.length < 2)
+                        month = '0' + month;
+                    if (day.length < 2)
+                        day = '0' + day;
+
+                    return [year, month, day].join('-');
+                }
+
+                return {
+                    currentDate: formatDate(currentDate),
+                    futureDate: formatDate(futureDate)
+                };
+            }
+
+            var dates = getCurrentDateAndFutureDate();
+            document.getElementById("start-date").innerText = dates.currentDate;
+            document.getElementById("end-date").innerText = dates.futureDate;
+        });
+    </script>
 </body>
 
 </html>
